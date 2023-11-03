@@ -1,6 +1,6 @@
 # Power-BI-Material
 
-Power BI Course Syllabus
+Power BI Course Content:
 
   The Power BI Course Curriculum is designed by Microsoft Power BI Certified Experts. Our Power BI Course Syllabus covers basic to advanced level concepts that consist of Report Designing, Visual Sync,     
   Grouping, Hierarchies, Filters, Bookmarks, Azure, Modeling, DAX Functions - Level 1, DAX Functions - Level 2, Power BI Cloud, Excel & RLS, Report Server, RDL and more. Get Practical Exposure on Microsoft 
