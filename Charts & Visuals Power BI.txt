@@ -1,0 +1,205 @@
+1. Simple Column Chart (Sum Ot by Category):
+	Readable where: (1C+1N) and (1C+1C) and (1N+1C) and (1N+1N) is unable to read. values (Data labels) 
+	are not clear.
+
+2. Simple Bar Chart (Sum Of sales by sub-category):
+	Readable where: (1C+1N) and (1C+1C) and (1N+1C) and (1N+1N) is unable to read. 
+	Simple Bar Chart is best suitable for more categorical values.
+	
+3. Stacked column chart:
+	readable when =(1C+1C+1N) and (1C+1C+1C) and (1N+1C+1N) and (1N+1N+1N) not readable, 
+	if we any coumn with more no of cateogories, then it is not suitable.
+
+4. Clustered column chart: 
+	just like a column chart 1C+1C+1N and 1C+1C+1C and (1N+1C+1N) and (1N+1N+1N) not readable, 
+	if we any coumn with more no of cateogories, then it is not suitable.
+
+5. Pie chart: 
+	if we want show, then we will check pie chart. 1C+ 1N%and 1C+1C% and (1N+1C) and (1N+1N) not 
+	readable. 
+
+6. 100% stacked column chart: 
+	% is calcultaed for eacj cataegory. 1C+1C+1N.
+
+7. Donut chart: 
+	If we want show % then we will refer donut Chart.
+
+8. Line chart: 
+	best suited for time series and trends.
+	
+9. simple coulmn chart (sum of sales by category): 
+	1N+1C and 1C+1C and (1N+1C) and (1N+1N) not readable 
+
+10. Area chart: 
+		similar to line chart, it is more redable in addition to area chart we will 
+
+11. simple bar chart(sum of sales by sub-category):
+		reasable when =1C+1N and 1C+1C and (1N+1C) and (1N+1N) not readable, 
+			values are not clear(data lable).
+
+12. simple bar chart:
+		sum of sales by sub-category): readable when =1C+1N and 1C+1C and (1N+1C) and (1N+1N) not 
+		readable, values are clear(data lable). It is best suitable for more categoricalvalues.
+
+13. Stacked area chart: 
+		similar to area chart we will add legends to get stacked area chart
+
+14. line and stacked column: 
+		we can add secondary axis along with region readable: 1D+1N+1N and 1D+1N+1N+1C
+
+15. Ribbon: 
+		this is suitable to check rankings. readable 1D+1N+1N and 1D+1N+1N+1C
+
+16. Scatter chart: 
+		it is like a 4 quadriants of X and Y axis. used to analyse the trends. (1N+1N)
+
+17. map chart: 
+		geographical location along with bubble size.
+
+18. filled map: 
+		same like a map chart, geographical location along with bubble size.the only difference is it 
+		fill/highlight the location with legend value.
+
+19. shape map: 
+		specific country with colour saturation. the darker the color, the more sales. 
+		here we can see only corresponding Map(not entire map/world map) suitable for single value 
+		(without legend).
+
+20. card: 
+		to repersent key KPI's with filter we can represent cataegory values in card. A card can 
+		take/reperent a single value at a time.
+
+21. Multi Row Card: 
+		it is similar to card and represent key KPI: the advantage with multi row card is that we can 
+		reperent more tha one value.
+
+22. Funnel chart: 
+		It is used to represnet conversion ratio/rate each value is dependent on the previous value
+		(+ve or -ve).
+
+23. Table: 
+		using table we can show more no. of KPI important value all together.
+		additionally we can apply conditional formatting in table value. using insights more effectively.
+
+24. Matrix: enhanced table/more readable.
+		matrix visual also works similairty like table visual we can add more cataegories,	
+		we can avoid scrolling bar in matrix value.
+
+25. Waterfall chart: 
+		it is used for break down analysis.	Above waterfall is showing total sales in each 	individual 
+		year and increase(or) decrease sales of a particular category between years.
+
+26. Gauge Chart: 
+		with measure and without measure using gauge chart we can set key number as a target and can check 
+		the results according to target.
+
+27. KPI: 
+		KPI chart is similar to gauge chart.
+		using KPI we can represent the % of Gain/Losses in the target for that particular period.
+		how much you achieved, how much have to achieve, ETC.
+
+28. Decomposition tree: 
+		We can use the decomposition tree to visualize data in multiple dimensions. We can drill down
+		and analyze data in the hierarchy for a quick analysis. Its’s artificial intelligence (AI) 
+		capability enables you to find the next dimension data as per defined criteria. We breakdown
+		(decompose) data into individual categories and determine the high,low values using
+		AI functions in this decomposition visual.	
+
+29. Tree map chat: 
+		tree map chart will reperent the data in a rectangular shape. the big in size of the
+		particular rectangle represents the more value. the big size the more sales.
+
+30. Key influencer charts:
+		comes under AI chart. it will reads the scenario and give the influeing factors.
+		not sure either values are perfect (or) not. not preferable. wont use much in real time.
+
+#Custom charts/visuals:
+
+31. Animated bar chart: 
+		works similarity bar chart.
+		there are some drawbacks with this chart, as was not certified/verified by microsoft.
+		we cant change bar colors we cant change axis values range.
+
+32. Word cloud: 
+		word cloud will work similar to tree map. The bigger letter size the more size.
+		in tree map, if there is more no. of categories then will loose readability, to overcome that we
+		can use word cloud chart. word cloud is suitable when we have more no. of categories values.	
+
+33. Drill Through and pie chart: 
+		using this chart we can show more no. of categoricalvalues.
+		we can get more information by given Drill Through we can enable also.
+		
+34. Infographic chart: 
+		using this we can produce customized bars containg images/pictures.
+		
+35. scroller: 
+		similar to scrolling headlines.
+		
+36. Sankey chart: 
+		using sankey chart, we can compare the difference between one categoricalvalues and another 
+		categoricalvalues flow between two categories we can reperent.
+		
+37. Radar Chart/spider web: 
+		we can show focus points using radar chart/spider web.
+		
+38. Text filters: 
+		we can say text filters is an advanced slicer.
+		but searching in text filter. the word directly will get filtered in Table/Matrix.
+	
+39. Tornado Chart: 
+		to compare between two categories.
+		using slicer we can filter and check required fields.
+	
+40. Sunburst chart: 
+		to represent hierarchy data we can use this chart.
+		if more cataegories it is not that readable.
+	
+41. Advanced card:	
+        it is similar to card visual, with conditionla formatting
+	
+42. Chiclet slicer:	
+		similar to slice.
+		it provider image functinality.
+		multiple field we can select without clicking 'Ctrl'
+	
+43. Stacked column chart: 
+		similar to in built stackked column chart.	using this chart we can select multiple categories by 
+		simply dragging on that particular column without clicking ctrl.
+	
+44. Enlighten Aquarium: 
+		The more sales the bigger Fish.
+		
+45. Hierachy slicer:
+        A Power BI hierarchy slicer allows you to filter information based on hierarchical filters, just as you can use slicers on numerical data.
+ 
+46. Calender of Tallan:
+        Visual offers an exciting way to display and filter date related data. View the aggregation of data across a range of dates in a standard calendar layout.
+
+47. Funnel Pyramid: 
+		similar to funnel charts(pro verison)
+
+48. Aster  Polt chart: 
+        The Aster Plot allows a category that drives the chart and up to 2 measures
+
+49. Horizontal Bar Chart: 
+        A horizontal bar chart that saves space by putting the category labels inside the bars.
+
+50. Play axis:
+        Working like a dynamic slicer, it animates your other power bi visuals without any user interaction.
+
+51. Drill Down Donut Chart:
+        These charts allow users to visualize categorical data in an interactive drill-down fashion.
+
+52. Drill Down Column Chart:
+        Drill Down Column Chart to visualize hierarchical data or drill down into specific categories or subcategories of your data. 
+
+53. Histogram:
+        A histogram is a type of chart that is used to show the distribution of data. It is a plot that shows the frequency of a data set that
+        falls within specified intervals, aka bins.
+
+
+
+	
+	
+
+	
