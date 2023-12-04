@@ -3,7 +3,7 @@
 Power BI Course Content:
 
   The Power BI Course Curriculum is designed by Microsoft Power BI Certified Experts. Our Power BI Course Syllabus covers basic to advanced level concepts that consist of Report Designing, Visual Sync,     
-  Grouping, Hierarchies, Filters, Bookmarks, Azure, Modeling, DAX Functions - Level 1, DAX Functions - Level 2, Power BI Cloud, Excel & RLS, Report Server, RDL and more. Get Practical Exposure on Microsoft 
+  Grouping, Hierarchies, Filters, Bookmarks, Data-Modeling, DAX Functions - Level 1, DAX Functions - Level 2, Power BI Cloud, Excel & RLS, Report Server, RDL and more. Get Practical Exposure on Microsoft 
   Power BI for Data Analytics and Visualization with Our Updated Power BI Training Course Content.
 
 Power BI Desktop
@@ -87,7 +87,9 @@ Objects and Actions (Hyperlinks)
   9.6 Action - Page Navigation
   9.7 Action - Back
   9.8 Action – Bookmark
+  
 Module 1: SQL SERVER INTRODUCTION
+
   	Data, Databases and RDBMS Software
   	Database Types: OLTP, DWH, OLAP
   	Microsoft SQL Server Advantages, Use
@@ -104,6 +106,7 @@ Module 1: SQL SERVER INTRODUCTION
   	Software Installation Pre-Requisites
 
 Module 2: Introduction to Power BI (Free Demo Class)
+
   	Power BI Job Roles in Real-time
   	Power BI Data Analyst Job Roles
   	Business Analyst - Job Roles
@@ -125,6 +128,7 @@ Module 2: Introduction to Power BI (Free Demo Class)
   	Working with the data model and creating a visualization
 
 Module 3: Basic Report Design
+
   	Power BI Desktop Installation
   	Data Sources & Visual Types
   	Canvas, Visualizations and Fields
@@ -142,6 +146,7 @@ Module 3: Basic Report Design
   	Power BI Ecosystem, Architecture
 
 Module 4: Visual Sync, Grouping
+
   	Slicer Visual: Real-time Usage
   	Orientation, Selection Properties
   	Single & Multi Select, CTRL Options
@@ -158,6 +163,7 @@ Module 4: Visual Sync, Grouping
   	Grouping Binned Data, Classification
 
 Module 5: Hierarchies, Filters
+
   	Creating Hierarchies in Power BI
   	Independent Drill-Down Options
   	Dependent Drill-Down Options
@@ -175,6 +181,7 @@ Module 5: Hierarchies, Filters
   	Cross Report Filters, Include, Exclude
 
 Module 6: Bookmarks, Azure, Modeling
+
   	Drill-thru Filters, Page Navigations
   	Bookmarks: Real-time Usage
   	Bookmarks for Visual Filters
@@ -192,6 +199,7 @@ Module 6: Bookmarks, Azure, Modeling
   	Web View & Mobile View in PBI
 
 Module 7: Visualization Properties
+
   	Stacked Charts and Clustered Charts
   	Line Charts, Area Charts, Bar Charts
   	100% Stacked Bar & Column Charts
@@ -209,6 +217,7 @@ Module 7: Visualization Properties
   	Series, Custom Series and Legends
 
 Power Query Editor
+
   Text Functions in Power Query editor
     	11.1- Merge
     	11.2 - Split and Trim
@@ -461,6 +470,7 @@ Power BI Service
     	Mobile Report Publisher, Usage
 
 Microsoft Power Platforms
+
   Module 18: PowerApps
     	Overview
     	Basic Power App Concept
@@ -487,6 +497,7 @@ Microsoft Power Platforms
     	Excluding dataset from sharing
 
   Module 20: Power BI and Excel Together
+  
     	Options for Publishing from Excel
     	Pin Excel Elements to Power BI
     	Analyze in Excel (Power BI Pro or Premium)
@@ -516,6 +527,7 @@ Microsoft Power Platforms
           
 Optional:
 Power BI Paginated Reports
+
       	1. Introduction 
       	2. Installation 
       	3. Creating Your First Report 
