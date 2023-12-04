@@ -218,13 +218,16 @@ Module 7: Visualization Properties
 Power Query Editor
 
   Text Functions in Power Query editor
+  
     	11.1- Merge
     	11.2 - Split and Trim
     	11.3 - Upper, Lower and Proper
     	11.4 - Add Suffix and Prefix
     	11.5 - Left, Right and Mid
     	11.6 - Extract Text with Delimiter
+    
   Date Functions in Power Query (Power E
+  
     	12.1 - Year, Quarter, Month, Day
     	12.2 - Difference between Dates, Earliest and Latest
     	12.3 - Name of Day and Name of Month
@@ -232,23 +235,31 @@ Power Query Editor
     	12.5 - Extract Date from Date and Time
     	12.6 - Calculate Age in 2 button Clicks
     	12.7 - Which day of Year, Quarter, Month your Date of Birth is
+    
   Number Functions in Power Query (Power BI)
+  
     	13.1 - Add, Subtract, Divide, Multiply
     	13.2 - Percentage, Percent of, Modulo
     	13.3 - Rounding the numbers
     	13.4 - IsEven, IsOdd and Sign
+    
   Appending Files and Tables in Power Bl (WITHOUT CODING)
+  
     	14.1 - Append multiple CSV Files from a folder
     	14.2 - Append multiple Excel tables/Sheets from single file
     	14.3 - Append Excel tables with different number of columns
     	14.4 - Append multiple Excel files from a folder
     	14.5 - Append different data source files in Power Query (Power BI)
+    
   Merging files and Tables in Power BI - [VLOOKVP without formula]
+  
     	15.1 - Merge-Tables/sheets in Power Query (Power BI)
     	15.2 - Merge Data from multiple Excel Files/Workbooks in Power Query (Power BI)
     	15.3 - Merge Data from different Data Sources in Power Query (Power Bl)
     	15.4 - Merge data having multiple Criteria in Power Query (Power BI)
+    
   Column from Examples and Conditional Column in Power BI
+  
     	16.1 Column from Examples on Splitting Text
     	16.2 Column from Examples on merging text
     	16.3 Column from Examples on data column
@@ -257,7 +268,9 @@ Power Query Editor
     	16.6 Conditional Column on two columns 
     	16.7 Conditional Column Comparing two column values 
     	16.8 Conditional Column on dates.
+    
   Very Important Topics in Power BI
+  
     	17.1 Fill down and fill up
     	17.2 Grouping
     	17.3 Transpose
@@ -266,7 +279,9 @@ Power Query Editor
     	17.6 Replace Errors and Values
     	17.7 Keep Rows and Remove Rows
     	17.8 Add, Remove, Goto Columns
-  M Language in Power Query (Power BI
+    
+  M Language in Power Query (Power BI)
+  
     	18.1 Introduction to M Language
     	18.2 M Functions - Date (ISIN)
     	18.3 M Functions - Date (Add and Subtract)
@@ -276,6 +291,7 @@ Power Query Editor
     	18.7 Trick to get all 900 M Functions Help
 
   Module 8: Power Query Level 1
+  
     	Power Query M Language Purpose
     	Power Query Architecture and ETL
     	Data Types, Literals and Values
@@ -293,6 +309,7 @@ Power Query Editor
     	ETL Operations with Power Query
 
   Module 9: Power Query Level 2
+  
     	Query Duplicate, Query Reference
     	Group By and Advanced Options
     	Aggregations with Power Query
@@ -310,6 +327,7 @@ Power Query Editor
     	Query Step Inserts and Step Edits
 
   Module 10: Power Query Level 3
+  
     	Creating Parameters in Power Query
     	Parameter Data Types, Default Lists
     	Static/Dynamic Lists for Parameters
@@ -327,6 +345,7 @@ Power Query Editor
     
 Power Pivot
   Module 11: DAX Functions - Level 1
+  
     	DAX: Importance in Real-time
     	Real-world usage of Excel, DAX
     	DAX Architecture, Entity Sets
@@ -344,6 +363,7 @@ Power Pivot
     	Dynamic Expressions, IF in DAX
 
   Module 12: DAX Functions - Level 2
+  
     	Data Modeling Options in DAX
     	Detecting Relations for DAX
     	Using Calculated Columns in DAX
@@ -361,6 +381,7 @@ Power Pivot
     	Running Total & EARLIER Function
 
   Module 13: DAX Functions Level 3
+  
     	Connection with CSV, MS Access
     	AVERAGEX and AVERAGE in DAX
     	KEEPFILTERS and CALCUALTE
@@ -377,8 +398,8 @@ Power Pivot
     	Time Intelligence Functions - DAX
 
 Power BI Service
-
   Module 14: Power BI Cloud - 1
+  
     	Power BI Service Architecture
     	Power BI Cloud Components, Use
     	App Workspaces, Report Publish
@@ -419,6 +440,7 @@ Power BI Service
     	Workspace Roles
 
   Module 15: Power BI Cloud - 2
+  
     	Dashboards Actions, Report Actions
     	Dataset Actions: Create Report
     	Share, Metrics and Exports
@@ -436,6 +458,7 @@ Power BI Service
     	Adding Entities and JSON Files
 
   Module 16: Excel & RLS
+  
     	Import and Upload Options in Excel
     	Excel Workbooks and Dashboards
     	Datasets in Excel and Dashboards
@@ -452,6 +475,7 @@ Power BI Service
     	Histogram, Gantt Chart, Infographics
 
   Module 17: Report Server, RDL
+  
     	Need for Report Server in PROD
     	Install, Configure Report Server
     	Report Server DB, Temp Database
