@@ -495,12 +495,14 @@ Power BI Service
 Microsoft Power Platforms
 
   Module 18: PowerApps
+  
     	Overview
     	Basic Power App Concept
     	Canvas Apps | Navigation | Customization
     	Contents (Galleries, Data Cards, Forms, Triggers, Functions & Formulas, Edit Forms, Text Boxes)
     
   Module 19: Power BI Service & Power BI Mobile
+  
     	Why Power Bi Service?
     	Comparison Power BI Free & Premium
     	Logging into Power Bi Service
