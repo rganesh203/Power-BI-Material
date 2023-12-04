@@ -7,6 +7,7 @@ Power BI Course Content:
   Power BI for Data Analytics and Visualization with Our Updated Power BI Training Course Content.
 
 Power BI Desktop
+
   1.1 Power BI Tutorial
   1.2 How to Download, Install and upgrade features in Power BI 
 
@@ -101,11 +102,9 @@ Module 1: SQL SERVER INTRODUCTION
   	Database Engine Component and OLTP
   	BI Components, Data Science Components
   	ETL, MSBI and Power BI Components
-  	Course Plan, Concepts, Resume, Project
-  	24 x 7 Online Labs for Remote DataBase Access
   	Software Installation Pre-Requisites
 
-Module 2: Introduction to Power BI (Free Demo Class)
+Module 2: Introduction to Power BI 
 
   	Power BI Job Roles in Real-time
   	Power BI Data Analyst Job Roles
