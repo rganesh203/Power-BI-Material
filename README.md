@@ -1,4 +1,5 @@
 # Power-BI-Material
+![name-of-you-image](https://www.kayrainfotech.com/wp-content/uploads/2022/08/power-BI.jpg)
 
 Power BI Course Content:
 
