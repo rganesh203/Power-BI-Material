@@ -1,0 +1,336 @@
+1. How To Import Latest File From A Folder Using Power Query - Power BI Trick
+
+	Select the latest data based on the creation date
+	Filter the excel files you want based on the creation date or modification date.
+	Expand content to get data.
+	Get the latest data when refresh.
+	
+	To import the last 10 days' files from a folder in Power BI Desktop using Power Query Editor, you can follow these steps:
+
+Get Data:
+
+Open Power BI Desktop.
+Click on the "Home" tab in the ribbon.
+Select "Get Data" and choose "Folder."
+Specify Folder:
+
+In the "Folder" dialog, enter the path to the folder containing your files or click on "Browse" to navigate to the folder.
+Click "OK" to proceed.
+Combine Binaries:
+
+After selecting the folder, Power BI will show a preview of the files in that folder. Click on the "Combine" dropdown in the Home tab and choose "Combine & Load."
+Transform Data using Power Query:
+
+Power Query Editor will open, and it will show a list of files in the selected folder.
+If your files have a date or timestamp in the file name or metadata, locate that column. If not, you may need to extract the date from the file name or content.
+Filter by Date:
+
+Add a new column that extracts the date information from the file names or metadata.
+Use the "Date Filters" in the filter options to filter for the last 10 days.
+Here's an example assuming your date information is in a column named "Date":
+
+m
+Copy code
+// Assuming Date is a datetime column
+let
+    Today = DateTime.LocalNow(),
+    FilteredRows = Table.SelectRows(Source, each [Date] >= Today - #duration(10, 0, 0, 0))
+in
+    FilteredRows
+This code filters the rows based on the assumption that the "Date" column contains datetime values.
+
+Load Data:
+
+Click on the "Close & Apply" button in the Home tab to apply the changes and load the selected files into Power BI.
+Adjust Data Types (if necessary):
+
+Ensure that the data types of the columns are correct. Power BI may automatically detect them, but you might need to adjust them in the Power Query Editor.
+By following these steps, you can connect to a folder, filter the files.
+
+2. joins in power bi
+	1) Inner Join.
+	2) Right Outer Join.
+	3) Left Outer Join.
+	4) Full Outer Join.
+	5) Right Anti Join.
+	6) Left Anti Join.
+
+3. what are the columns in bridge table in power bi
+ 
+It typically contains columns that serve as foreign keys to connect the primary keys of the two related tables. The specific columns in a bridge table may vary depending on the context of your data model, but here are some common columns you might find in a bridge table:
+ForeignKey1: A foreign key column linking to the primary key of the first related table.
+ForeignKey2: A foreign key column linking to the primary key of the second related table.
+
+4. power bi service data base connection
+
+
+Connecting Power BI Service to a database involves a few steps. Power BI Service is a cloud-based platform that allows you to create reports and dashboards, and it can connect to various data sources, including databases. Here's a general guide on how to connect Power BI Service to a database:
+
+Prepare Your Data:
+
+Ensure that your database is accessible from the internet. If it's not hosted locally, make sure it's reachable over the network.
+Publish Your Report to Power BI Service:
+
+Create your report in Power BI Desktop.
+Save the Power BI Desktop (.pbix) file.
+In Power BI Desktop, click on "Publish" in the Home tab, and select the Power BI Service workspace where you want to publish your report.
+Configure Data Source Credentials:
+
+Open the Power BI Service in a web browser.
+Navigate to the workspace where you published your report.
+Click on the dataset you just published.
+In the dataset details page, click on "More options" (three dots) and select "Manage Data Source."
+Enter the connection details for your database, including server address, database name, and credentials. Choose the appropriate authentication method.
+Gateway Configuration (if needed):
+
+If your database is on-premises or in a private network, you may need to install and configure the Power BI Gateway. The gateway allows Power BI Service to connect to on-premises data sources securely.
+Schedule Data Refresh (if needed):
+
+Configure the refresh schedule for your dataset if you want to keep the data up-to-date in Power BI Service. You can set up automatic refreshes to pull in the latest data from your database.
+Test Connection:
+
+After configuring the data source, click on the "Test connection" button to ensure that Power BI Service can successfully connect to your database.
+Create Reports and Dashboards in Power BI Service:
+
+Once the connection is established, you can create or edit reports and dashboards directly in the Power BI Service.
+
+
+
+
+
+with result as 
+	(select salary, dense_rank() over(order by salary desc) as dr from empleoyee)
+select salary from result where dr=2
+
+
+
+
+Top15=calculate(sum[salary], topN(15, sum[salary], all[tabale_name], dense,,desc))
+
+
+
+last 12 months sales=calculate(sum[salary], sameperiodparalleeyear([dates_col_name])
+
+last 12 months sales=calculate(sum[salary], datesinperiod(max[dates_col_name],min(dates_col_name),-12)
+
+
+User
+Azure Datafactory - dynamically copy subsection of columns from one database table to another
+
+
+one of pipeline is failed and another pipeline have to run in adf how to achieve
+ChatGPT
+In Azure Data Factory (ADF), you can handle the scenario where one pipeline fails, and another pipeline needs to run using a combination of error handling, triggers, and dependency management. Here's a general approach to achieve this:
+
+Error Handling in the Failed Pipeline:
+In the pipeline that might fail, make sure to implement error handling. You can use activities such as "Failure" activities, conditional activities, or Try-Catch blocks to manage errors gracefully. For example, you might use an Execute Pipeline activity inside a Try block and configure a Failure activity in the Catch block to handle errors.
+
+Trigger Dependency Pipeline:
+Create a new pipeline that you want to run when the first pipeline fails. This pipeline should include the activities or logic you want to execute in response to the failure.
+
+Add Dependency Between Pipelines:
+In the second pipeline, set up a dependency on the first pipeline. You can do this by configuring the "Depends on" property in the pipeline settings. This ensures that the second pipeline will only run if the first pipeline completes, whether it succeeds or fails.
+
+Trigger Pipelines with Triggers:
+Use triggers to initiate the execution of your pipelines. You can create a trigger for the first pipeline to run it at a specific schedule or based on an event. Additionally, you can set up a trigger for the second pipeline to run it when the first pipeline finishes (regardless of success or failure).
+
+For the first pipeline, use a trigger like a schedule trigger or event-based trigger.
+For the second pipeline, use a trigger like a pipeline run trigger with a dependency on the first pipeline.
+Ensure that you configure the triggers appropriately to meet your requirements.
+
+Here's a high-level illustration of the dependency setup:
+
+scss
+Copy code
+Pipeline 1 (Main Pipeline) -> [Success] -> (End)
+                        \-> [Failure] -> (Execute Pipeline 2)
+
+Pipeline 2 (Dependency Pipeline) -> (Activities to Run on Failure)
+In this setup, if Pipeline 1 succeeds, it completes. If it fails, Pipeline 2 is triggered automatically to perform the necessary actions.
+
+Remember to adapt this approach based on your specific use case and the logic you want to implement in response to pipeline failures. Also, consider using parameterization and dynamic content to make your solution more flexible.
+
+
+how to clear cache spark databricks
+
+
+In Apache Spark on Databricks, you can clear the cache using the unpersist method on the RDD (Resilient Distributed Dataset) or DataFrame that you want to remove from the cache. This is useful when you want to free up resources and memory by removing cached data that is no longer needed. Here are the steps:
+
+For RDDs:
+
+# Assuming 'myRDD' is the RDD you want to clear from the cache
+myRDD.unpersist()
+For DataFrames:
+
+# Assuming 'myDataFrame' is the DataFrame you want to clear from the cache
+myDataFrame.unpersist()
+Clearing all cached data:
+If you want to clear all cached data, you can use the unpersist method without specifying a particular RDD or DataFrame:
+
+# Clear all cached data
+spark.catalog.clearCache()
+Keep in mind that Spark manages caching automatically, and you often don't need to manually clear the cache. However, in cases where you have cached data that you want to explicitly remove, the unpersist method is the way to do it.
+
+Remember that calling unpersist only marks the RDD or DataFrame as non-persistent, and the actual removal from the cache might happen later when Spark decides it's appropriate. If you need to force the removal immediately, you can pass blocking=True:
+
+myDataFrame.unpersist(blocking=True)
+This will block until all blocks of the data are removed from all nodes.
+
+Keep in mind that if you are working in a Databricks notebook, you can also use the "Clear" button in the notebook toolbar to clear all cached data associated with that notebook.
+
+
+
+
+|time|department|items_sold|
++----+----------+----------+
+|   1|        IT|        15|
+|   2|   Support|        81|
+|   3|   Support|        90|
+|   4|   Support|        25|
+|   5|        IT|        40|
+|   6|        IT|        24|
+|   7|   Support|        31|
+|   8|   Support|         1|
+|   9|        HR|        27|
+|  10|        IT|        75|
+
+
+
+
+df=.witcolumn(col(running_total),agge(sum(items_sold).over(
+
+
+
+
+
+|time|department|items_sold|running_total|
++----+----------+----------+-------------+
+|   9|        HR|        27|           27|
+|   1|        IT|        15|           15|
+|   5|        IT|        40|           55|
+|   6|        IT|        24|           79|
+|  10|        IT|        75|          154|
+|   2|   Support|        81|           81|
+|   3|   Support|        90|          171|
+|   4|   Support|        25|          196|
+|   7|   Support|        31
+
+1. how copy onprime table to cloud blob storage
+2. how push multiple table 
+3. limitation of for each activity
+4. delta lake optimization technique
+5. how to validate schema in spark session
+6. how to last few months data in delta table
+7. difference b/w T/F vs Action.
+8. default no of partitions on delta lake
+9. how scheduled pipelines Azure services
+10. jobs and task in databricks.
+11. what is broadcast variable.
+12. how to resolve out of issues memory.
+13. how to optimize delta table
+14. print cummulative sum
+15. rank vs dense_rank
+16. lead vs lag in sql
+17. remove dulpicate rows in pyspark
+|time|department|items_sold|
++----+----------+----------+
+|   1|        IT|        15|
+|   2|   Support|        81|
+|   3|   Support|        90|
+|   4|   Support|        25|
+|   5|        IT|        40|
+|   6|        IT|        24|
+|   7|   Support|        31|
+|   8|   Support|         1|
+|   9|        HR|        27|
+|  10|        IT|        75|
+
+
+
+
+
+cto	15/12/2023
+1.serialization technique
+	what are serialization technique in pyspark
+
+	ChatGPT
+	In PySpark, serialization is the process of converting data structures or objects into a format that can be easily transmitted or stored. Serialization is important in distributed computing environments like Apache Spark, where data needs to be sent across the network or stored on disk. PySpark provides several serialization techniques to optimize data transfer and processing. Here are some common serialization techniques used in PySpark:
+
+	Pickling (Default): PySpark uses Python's built-in pickle module by default for serialization. Pickling is the process of converting a Python object into a byte stream. While this is convenient, it can be less efficient compared to other serialization formats.
+
+	Avro Serialization: Avro is a binary serialization format developed within the Apache Hadoop project. It is a compact and fast serialization format that supports schema evolution. You can use the Avro serialization format in PySpark by specifying it in the configuration.
+
+	python
+	Copy code
+	from pyspark.sql import SparkSession
+
+	spark = SparkSession.builder.appName("example").config("spark.serializer", "org.apache.spark.serializer.KryoSerializer").getOrCreate()
+	Kryo Serialization: Kryo is a third-party Java serialization library that is faster and more compact than Java's default serialization. PySpark supports Kryo as an alternative to the default Python pickle serialization. To enable Kryo serialization, you need to configure Spark to use the Kryo serializer.
+
+	python
+	Copy code
+	from pyspark.sql import SparkSession
+
+	spark = SparkSession.builder.appName("example").config("spark.serializer", "org.apache.spark.serializer.KryoSerializer").getOrCreate()
+	Parquet Format: Parquet is a columnar storage format that is commonly used in big data processing. While not a serialization format per se, Parquet can be considered a serialization technique for storing and reading data efficiently.
+
+	python
+	Copy code
+	from pyspark.sql import SparkSession
+
+	spark = SparkSession.builder.appName("example").config("spark.sql.parquet.compression.codec", "snappy").getOrCreate()
+	Arrow Format: Apache Arrow is an in-memory columnar data format that is designed for high-performance analytics. In PySpark, you can use Arrow for better performance in data transfer between the JVM and Python.
+
+	python
+	Copy code
+	from pyspark.sql import SparkSession
+
+	spark = SparkSession.builder.appName("example").config("spark.sql.execution.arrow.pyspark.enabled", "true").getOrCreate()
+	You can configure serialization options when creating a SparkSession to choose the one that best fits your specific use case and requirements. The choice of serialization technique can impact the performance of your PySpark application, so it's essential to consider the characteristics of your data and the nature of your processing tasks.
+2.what is views
+
+3. how to do spark streaming 
+
+Databricks|Pyspark Performance Optimization:
+1. Repartition vs Coalesce
+2. Cache vs Persist
+3. Broadcast Variable
+4. Adaptive Query Execution
+5. Code Optimization(Shuffle Partition)
+6. PartitionBy
+7. Dataframe Checkpoint
+8. Data Skew Optimization
+9. Catalyst Optimizer
+10. Snappy vs Gzip
+11. Optimized Autoscaling
+12. Avoid Using User-Defined Functions if Possible
+13. Data Serialization(Data Storage Formats)
+14. Vacuum Command
+15. Z-Order Command
+16. Use Explain Plan
+17. Sort-Merge Join (SMJ)
+18. Bucketing
+19. Delta Cache
+20. Use Select instead of  WithColumn
+21. Internals of Partition Creation Demystified
+22. Re-order Columns in Delta Table
+23. Use Spark UI for Monitoring
+24. Dynamic Allocation(Cluster Configuration)
+25. Use DataFrames Instead of RDDs
+26. Use Column Pruning
+27. Code Optimization
+28. Avoid Cluster Libraries
+29. Job Optimization
+30. Streaming Optimization 
+31. Databricks Runtime Version
+
+
+
+
+
+
+
+
+
+
+
